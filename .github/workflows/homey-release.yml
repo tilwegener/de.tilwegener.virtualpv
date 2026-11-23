@@ -30,8 +30,9 @@ jobs:
           const { version } = require('./.homeycompose/app.json');
           const changelog = require('./.homeychangelog.json');
 
-          if (process.env.RELEASE_TAG !== `v${version}`) {
-            throw new Error(`The release tag must be v${version} to match the Homey manifest.`);
+          const tag = process.env.RELEASE_TAG;
+          if (tag !== version && tag !== `v${version}`) {
+            throw new Error(`Release tag "${tag}" must be "${version}" or "v${version}" to match the Homey manifest.`);
           }
 
           if (!changelog[version]?.en?.trim()) {
