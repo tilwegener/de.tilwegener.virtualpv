@@ -1,0 +1,19 @@
+{
+  "name": { "en": "Virtual solar panels", "de": "Virtuelles Balkonkraftwerk" },
+  "class": "solarpanel",
+  "capabilities": ["measure_power", "meter_power"],
+  "energy": { "meterPowerExportedCapability": "meter_power" },
+  "images": {
+    "small": "/drivers/virtual-pv/assets/images/small.png",
+    "large": "/drivers/virtual-pv/assets/images/large.png",
+    "xlarge": "/drivers/virtual-pv/assets/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": { "next": "add_devices" }
+    },
+    { "id": "add_devices", "template": "add_devices" }
+  ]
+}

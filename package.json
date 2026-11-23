@@ -1,0 +1,12 @@
+{
+  "name": "de.tilwegener.virtualpv",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "homey app validate",
+    "start": "homey app run"
+  },
+  "devDependencies": {
+    "homey": "4.6.3"
+  }
+}

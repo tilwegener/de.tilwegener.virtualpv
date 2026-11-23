@@ -1,0 +1,21 @@
+{
+  "id": "de.tilwegener.virtualpv",
+  "version": "1.0.0",
+  "compatibility": ">=12.0.0",
+  "sdk": 3,
+  "platforms": ["local"],
+  "name": { "en": "Virtual PV", "de": "Virtuelle PV-Anlage" },
+  "description": {
+    "en": "Set the production readings of your virtual solar panels.",
+    "de": "Setze die Erzeugungswerte deines virtuellen Balkonkraftwerks."
+  },
+  "category": ["tools"],
+  "brandColor": "#123048",
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": { "name": "Til Wegener" }
+}

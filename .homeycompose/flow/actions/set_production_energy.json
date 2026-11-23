@@ -1,0 +1,27 @@
+{
+  "title": {
+    "en": "Set total generated energy",
+    "de": "Gesamtertrag setzen"
+  },
+  "titleFormatted": {
+    "en": "Set total generated energy to [[value]] kWh",
+    "de": "Gesamtertrag auf [[value]] kWh setzen"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=virtual-pv"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "min": 0,
+      "step": 0.001,
+      "placeholder": {
+        "en": "kWh",
+        "de": "kWh"
+      }
+    }
+  ]
+}

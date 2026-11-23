@@ -1,0 +1,27 @@
+{
+  "title": {
+    "en": "Set production power",
+    "de": "Erzeugungsleistung setzen"
+  },
+  "titleFormatted": {
+    "en": "Set production power to [[value]] W",
+    "de": "Erzeugungsleistung auf [[value]] W setzen"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=virtual-pv"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "min": 0,
+      "step": 0.01,
+      "placeholder": {
+        "en": "W",
+        "de": "W"
+      }
+    }
+  ]
+}

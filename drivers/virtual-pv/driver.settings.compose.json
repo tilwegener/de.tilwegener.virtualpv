@@ -1,0 +1,20 @@
+[
+  {
+    "id": "production_power",
+    "type": "number",
+    "label": { "en": "Current production", "de": "Aktuelle Erzeugungsleistung" },
+    "value": 0,
+    "min": 0,
+    "step": 0.01,
+    "units": { "en": "W", "de": "W" }
+  },
+  {
+    "id": "production_energy",
+    "type": "number",
+    "label": { "en": "Total generated energy", "de": "Gesamtertrag" },
+    "value": 0,
+    "min": 0,
+    "step": 0.001,
+    "units": { "en": "kWh", "de": "kWh" }
+  }
+]
