@@ -22,3 +22,9 @@ npm run start -- --remote
 Der letzte Befehl startet die App zum Entwickeln auf dem gewählten Homey. Mit `npx homey app install` kannst du sie direkt auf dem gewählten Homey installieren.
 
 Bearbeite das App-Manifest unter `.homeycompose/app.json` und die Treiberdateien unter `drivers/virtual-pv/`. Die Homey CLI erzeugt bei der Validierung das zusammengeführte `app.json`.
+
+## GitHub-Release zu Homey hochladen
+
+1. Erstelle in den [Homey Developer Tools](https://tools.developer.homey.app/me) einen Personal Access Token für das Athom-Konto, dem die App gehört. Hinterlege ihn im GitHub-Repository unter **Settings → Secrets and variables → Actions** als Repository-Secret `HOMEY_PAT`.
+2. Setze die gewünschte Version in `.homeycompose/app.json` und ergänze den englischen Eintrag (`en`) für dieselbe Version in `.homeychangelog.json`. Führe `npm run validate` aus und committe auch das erzeugte `app.json`.
+3. Veröffentliche auf GitHub ein Release für diesen Commit mit dem Tag `v<Version>`, zum Beispiel `v1.0.0`. Der Workflow lädt den Build als Entwurf in die Homey Developer Tools hoch. Von dort kannst du ihn als Testversion freigeben oder zur Prüfung für den Homey App Store einreichen.

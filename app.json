@@ -19,6 +19,7 @@
     "tools"
   ],
   "brandColor": "#123048",
+  "support": "https://github.com/tilwegener/de.tilwegener.virtualpv/issues",
   "permissions": [],
   "images": {
     "small": "/assets/images/small.png",
@@ -53,6 +54,10 @@
             "placeholder": {
               "en": "kWh",
               "de": "kWh"
+            },
+            "title": {
+              "en": "Total generated energy (kWh)",
+              "de": "Gesamtertrag (kWh)"
             }
           }
         ],
@@ -81,6 +86,10 @@
             "placeholder": {
               "en": "W",
               "de": "W"
+            },
+            "title": {
+              "en": "Current production (W)",
+              "de": "Aktuelle Erzeugungsleistung (W)"
             }
           }
         ],
@@ -95,6 +104,10 @@
         "de": "Virtuelles Balkonkraftwerk"
       },
       "class": "solarpanel",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "capabilities": [
         "measure_power",
         "meter_power"

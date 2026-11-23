@@ -1,0 +1,54 @@
+name: Upload release to Homey
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the release
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Check release version and changelog
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          node <<'JS'
+          const { version } = require('./.homeycompose/app.json');
+          const changelog = require('./.homeychangelog.json');
+
+          if (process.env.RELEASE_TAG !== `v${version}`) {
+            throw new Error(`The release tag must be v${version} to match the Homey manifest.`);
+          }
+
+          if (!changelog[version]?.en?.trim()) {
+            throw new Error(`Add an English Homey changelog entry for version ${version}.`);
+          }
+          JS
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Upload draft to Homey
+        env:
+          HOMEY_HEADLESS: '1'
+          HOMEY_PAT: ${{ secrets.HOMEY_PAT }}
+        run: |
+          if [[ -z "${HOMEY_PAT}" ]]; then
+            echo "::error::Set the HOMEY_PAT repository secret before publishing a release."
+            exit 1
+          fi
+          ./node_modules/.bin/homey app publish

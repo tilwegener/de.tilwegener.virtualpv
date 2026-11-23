@@ -21,6 +21,10 @@
       "placeholder": {
         "en": "kWh",
         "de": "kWh"
+      },
+      "title": {
+        "en": "Total generated energy (kWh)",
+        "de": "Gesamtertrag (kWh)"
       }
     }
   ]

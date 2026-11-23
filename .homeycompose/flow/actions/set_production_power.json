@@ -21,6 +21,10 @@
       "placeholder": {
         "en": "W",
         "de": "W"
+      },
+      "title": {
+        "en": "Current production (W)",
+        "de": "Aktuelle Erzeugungsleistung (W)"
       }
     }
   ]

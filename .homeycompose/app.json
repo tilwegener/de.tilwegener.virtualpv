@@ -11,6 +11,7 @@
   },
   "category": ["tools"],
   "brandColor": "#123048",
+  "support": "https://github.com/tilwegener/de.tilwegener.virtualpv/issues",
   "permissions": [],
   "images": {
     "small": "/assets/images/small.png",
