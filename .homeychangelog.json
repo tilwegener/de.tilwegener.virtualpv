@@ -2,5 +2,9 @@
   "1.0.0": {
     "en": "Add a virtual solar panel with manually editable production and energy readings and Homey Flow actions.",
     "de": "Ein virtuelles Balkonkraftwerk mit manuell einstellbaren Erzeugungswerten und Homey-Flow-Aktionen."
+  },
+  "1.0.1": {
+    "en": "Update the app artwork.",
+    "de": "Die App-Bilder wurden aktualisiert."
   }
 }
