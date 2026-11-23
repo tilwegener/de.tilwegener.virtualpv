@@ -12,8 +12,8 @@
     "de": "Virtuelle PV-Anlage"
   },
   "description": {
-    "en": "Set the production readings of your virtual solar panels.",
-    "de": "Setze die Erzeugungswerte deines virtuellen Balkonkraftwerks."
+    "en": "Show third-party solar readings in Homey Energy via Flows.",
+    "de": "Zeige PV-Messwerte von Drittanbietern per Flow in Homey Energy."
   },
   "category": [
     "tools"

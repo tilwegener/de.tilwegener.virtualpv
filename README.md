@@ -7,6 +7,8 @@ Füge in Homey ein **Virtuelles Balkonkraftwerk** hinzu. Das Gerät erscheint al
 
 Beide Werte lassen sich in den erweiterten Geräteeinstellungen eingeben. Für automatische Aktualisierungen nutze die Flow-Aktionen **Erzeugungsleistung setzen** und **Gesamtertrag setzen**. Die Aktionen akzeptieren Zahlen-Tokens.
 
+So kannst du auch Balkonkraftwerke und Wechselrichter ohne eigene Homey-App in Homey Energy anzeigen. Lies die Messwerte des Drittanbieters mit einem Skript aus und übergib sie als Zahlen-Tokens an die beiden Flow-Aktionen. Das virtuelle Balkonkraftwerk übernimmt damit die aktuelle Leistung in W und den kumulierten Gesamtertrag in kWh.
+
 ## Entwickeln und installieren
 
 Voraussetzungen sind Node.js 24 oder neuer für die Homey CLI und ein kompatibles Homey mit Homey OS 12 oder neuer.
